@@ -1,5 +1,6 @@
 {
+  "verbose": false,
   "execMap": {
-    "js": "sucrase-node"
+    "js": "node -r sucrase/register"
   }
 }
