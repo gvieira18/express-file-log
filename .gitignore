@@ -1,6 +1,1 @@
 node_modules
-
-logs/err/*
-!logs/err/.gitkeep
-logs/visitors/*
-!logs/visitors/.gitkeep
