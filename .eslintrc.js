@@ -24,5 +24,6 @@ module.exports = {
   ignorePatterns: ['node_modules', 'dist', 'coverage'],
   rules: {
     'no-unused-vars': [LEVEL.ERROR, { argsIgnorePattern: '_' }],
+    'class-methods-use-this': LEVEL.OFF,
   },
 };
