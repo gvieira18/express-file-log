@@ -39,13 +39,51 @@ class HttpServer {
     const routes = [
       {
         method: 'get',
-        path: '/get',
-        handler: (req, res) => res.status(200).json({ message: 'GET' }),
+        path: '/trace',
+        handler: (_req, res) => {
+          this.logger.trace('TRACE');
+          return res.status(200).json({ message: 'GET' });
+        },
       },
       {
-        method: 'post',
-        path: '/post',
-        handler: (req, res) => res.status(201).json({ message: 'POST' }),
+        method: 'get',
+        path: '/debug',
+        handler: (_req, res) => {
+          this.logger.debug('DEBUG');
+          return res.status(200).json({ message: 'GET' });
+        },
+      },
+      {
+        method: 'get',
+        path: '/info',
+        handler: (_req, res) => {
+          this.logger.info('INFO');
+          return res.status(200).json({ message: 'GET' });
+        },
+      },
+      {
+        method: 'get',
+        path: '/warn',
+        handler: (_req, res) => {
+          this.logger.warn('WARN');
+          return res.status(200).json({ message: 'GET' });
+        },
+      },
+      {
+        method: 'get',
+        path: '/error',
+        handler: (_req, res) => {
+          this.logger.error('ERROR');
+          return res.status(200).json({ message: 'GET' });
+        },
+      },
+      {
+        method: 'get',
+        path: '/fatal',
+        handler: (_req, res) => {
+          this.logger.fatal('FATAL');
+          return res.status(200).json({ message: 'GET' });
+        },
       },
     ];
 
