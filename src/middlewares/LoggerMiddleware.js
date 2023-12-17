@@ -1,9 +1,6 @@
 import morgan from 'morgan';
 
-morgan.format(
-  'dev-without-collors',
-  ':method :url :status :response-time ms - :res[content-length]'
-);
+morgan.format('dev-without-collors', ':method :url :status :response-time :res[content-length]');
 
 export default (logger) => {
   const stream = {
